@@ -47,15 +47,19 @@ namespace ExamPractice
     {
         public class AddressRepository
         {
-            public IEnumerable<string> GetStreets(int cityId)
+            public IEnumerable<string> GetStreets(string name)
             {
                 using (var _context = new FluentContext())
                 {
-                    return _context.Persons.Where(x => x.Address.CityId == cityId).Select(x => x.Address.Street).Where(x => x.Count() > 10).ToList();
+                    return _context.Persons
+                        .Join(_context.Cities.Where(x=>x.Name==name), per => per.Address.CityId,
+                         ct => ct.Id,
+                        (per, ct) =>  per)
+                        .GroupBy(x=>x.Address)
+                        .Select(x => x.Key.Street).Where(x => x.Count() > 10).ToList();
                 }
             }
         }
-
         static void Main(string[] args)
         {
             Console.WriteLine("Hi");

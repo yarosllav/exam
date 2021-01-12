@@ -12,52 +12,50 @@ namespace Task1
         static void Main(string[] args)
         {
             int.TryParse(Console.ReadLine(), out var threads);
-            var randomList = GetRandomList(1000000);    
-            //ThreadPool.SetMinThreads(threads, threads);
-            //ThreadPool.SetMaxThreads(threads,threads);
+            ThreadPool.SetMinThreads(threads, threads);
+            ThreadPool.SetMaxThreads(threads, threads);
             var watch = Stopwatch.StartNew();
-
-            Parallel.For(0, 100, new ParallelOptions() { MaxDegreeOfParallelism = threads }, d =>
-             {
-                 GetLessThan10000(randomList);
-             });
-            //CountdownEvent e = new CountdownEvent(1);
-            //for (int i = 0; i < 100; i++)
-            //{
-            //    e.AddCount();
-            //    ThreadPool.QueueUserWorkItem(target =>
-            //    {
-            //        GetLessThan10000(randomList);
-            //        e.Signal();
-            //    });     
-            //}
-            //e.Signal();
-            //e.Wait();
+            var tasks = new Task[100];
+            for (int i = 0; i < 100; i++)
+            {
+                tasks[i] = new Task(Count);
+                tasks[i].Start();
+            }
+            Task.WaitAll(tasks);
             watch.Stop();
-            Console.WriteLine("Time: " + watch.ElapsedMilliseconds + "ms");
 
+            Console.WriteLine("Time: " + watch.ElapsedMilliseconds + "ms");
             Console.ReadLine();
         }
 
 
-        public static IEnumerable<int> GetRandomList(int size)
+        public static void Count()
         {
-            var random = new Random();
-            for (int k = 0; k < size; k++)
+            for (int i = 1; i <= 10000; i++)
             {
-                yield return random.Next(1, 20000);
+                IsPrimeNumber(i);
             }
         }
 
-        public static IEnumerable<int> GetLessThan10000(IEnumerable<int> input)
+        public static bool IsPrimeNumber(int n)
         {
-            var list = new List<int>();
-            foreach (var item in input)
+            var result = true;
+            if (n > 1)
             {
-                if (item <= 10000)
-                    list.Add(item);
+                for (var i = 2u; i < n; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        result = false;
+                        break;
+                    }
+                }
             }
-            return list;
+            else
+            {
+                result = false;
+            }
+            return result;
         }
     }
 }

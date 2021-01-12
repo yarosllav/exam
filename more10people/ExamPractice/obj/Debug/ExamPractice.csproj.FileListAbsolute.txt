@@ -24,3 +24,17 @@ C:\Users\shpar\OneDrive\Рабочий стол\migrations\more10people\ExamPrac
 C:\Users\shpar\OneDrive\Рабочий стол\migrations\more10people\ExamPractice\obj\Debug\ExamPractice.pdb
 C:\Users\shpar\OneDrive\Рабочий стол\migrations\more10people\ExamPractice\obj\Debug\ExamPractice.Migrations.InitialCreate.resources
 C:\Users\shpar\OneDrive\Рабочий стол\migrations\more10people\ExamPractice\obj\Debug\ExamPractice.csproj.GenerateResource.cache
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\bin\Debug\ExamPractice.exe.config
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\bin\Debug\ExamPractice.exe
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\bin\Debug\ExamPractice.pdb
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\bin\Debug\EntityFramework.dll
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\bin\Debug\EntityFramework.SqlServer.dll
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\bin\Debug\EntityFramework.xml
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\bin\Debug\EntityFramework.SqlServer.xml
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\obj\Debug\ExamPractice.csprojAssemblyReference.cache
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\obj\Debug\ExamPractice.Migrations.InitialCreate.resources
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\obj\Debug\ExamPractice.csproj.GenerateResource.cache
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\obj\Debug\ExamPractice.csproj.CoreCompileInputs.cache
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\obj\Debug\ExamPractice.csproj.CopyComplete
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\obj\Debug\ExamPractice.exe
+C:\D\KPI\progaExam\repo\more10people\ExamPractice\obj\Debug\ExamPractice.pdb
