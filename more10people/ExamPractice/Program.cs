@@ -56,7 +56,8 @@ namespace ExamPractice
                          ct => ct.Id,
                         (per, ct) =>  per)
                         .GroupBy(x=>x.Address)
-                        .Select(x => x.Key.Street).Where(x => x.Count() > 10).ToList();
+                        .Where(x => x.Count() > 10)
+                        .Select(x => x.Key.Street).ToList();
                 }
             }
         }
